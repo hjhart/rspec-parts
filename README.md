@@ -1,8 +1,9 @@
 # Rspec::Parts
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/rspec/parts`. To experiment with that code, run `bin/console` for an interactive prompt.
+When using Travis Pro we had five available executors, of which only two were being used, one by jasmine and one by rspec.
+This allows you to split your spec suite into multiple *parts*. We wanted to split our rspec suite into four parts and run each of them in one individual build.
 
-TODO: Delete this and the text above, and describe your gem
+This allowed us to go from running one in 70 minutes to running four in 15 minutes each.
 
 ## Installation
 
@@ -22,7 +23,14 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Now you can run the following:
+
+```shell
+be rake spec:part[1,4]
+```
+
+This will divide your spec directory into four equal parts, then run the first part.
+
 
 ## Development
 
