@@ -1,9 +1,11 @@
 # Rspec::Parts
 
-When using Travis Pro we had five available executors, of which only two were being used, one by jasmine and one by rspec.
-This allows you to split your spec suite into multiple *parts*. We wanted to split our rspec suite into four parts and run each of them in one individual build.
+### Speed up your builds, fully utilize your Travis Pro capacity!
 
-This allowed us to go from running one in 70 minutes to running four in 15 minutes each.
+When using Travis Pro we had five available executors, of which only two were being used, one by [Jasmine][jasmine] and one by [Rspec][rspec].
+This allows you to split your spec suite into multiple, but equal **parts**. We wanted to split our rspec suite into four parts to fully utilize our remaining executors.
+
+This sped up our Travis Pro builds from running one travis process in **70 minutes** to running four processes in **15 minutes** each.
 
 ## Installation
 
@@ -26,11 +28,10 @@ Or install it yourself as:
 Now you can run the following:
 
 ```shell
-be rake spec:part[1,4]
+rake spec:part[1,4]
 ```
 
-This will divide your spec directory into four equal parts, then run the first part.
-
+This will divide your specs into four equal parts, then run the first part of the four. `rake spec:part[2,4]` will run the second part, and so on.
 
 ## Development
 
@@ -40,10 +41,12 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/rspec-parts. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](contributor-covenant.org) code of conduct.
-
+Bug reports and pull requests are welcome on GitHub at https://github.com/hjhart/rspec-parts. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](contributor-covenant.org) code of conduct.
 
 ## License
 
-The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
+The gem is available as open source under the terms of the [MIT License][mit-license].
 
+[mit-license]: http://opensource.org/licenses/MIT
+[jasmine]: https://github.com/jasmine/jasmine-gem
+[rspec]: https://github.com/rspec/rspec
