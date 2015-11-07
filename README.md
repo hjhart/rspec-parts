@@ -1,5 +1,7 @@
 # Rspec::Parts
 
+[![Build Status](https://travis-ci.org/hjhart/rspec-parts.svg?branch=master)](https://travis-ci.org/hjhart/rspec-parts)
+
 ### Speed up your builds, fully utilize your Travis Pro capacity!
 
 When using Travis Pro we had five available executors, of which only two were being used, one by [Jasmine][jasmine] and one by [Rspec][rspec].
