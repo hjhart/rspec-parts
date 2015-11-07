@@ -41,11 +41,13 @@ The following are available for configuration:
         config.file_list_exclusions = ['spec_helper.rb', 'spec/controllers/jasmine_fixture_generation/*.rb']
         config.spec_directory_glob = 'test/*'
         config.rspec_opts = '--profile --tag ~nginx --format progress'
+        config.default_number_of_parts = 2
       end
 
 * `file_list_exclusions` will exclude the following files or directories from running.
 * `spec_directory_glob` allows you to choose which directories to include
 * `rspec_opts` allows you to tack on rspec options to the `rspec` command.
+* `default_number_of_parts` defaults to 4. This gets overridden by the second parameter in the command `rake spec:part[1,4]` but can be useful if you want to run a shortened version of the command: `rake spec:part[1]`
 
 See the `rspec_parts.rake` file for the usage of configuration variables.
 
