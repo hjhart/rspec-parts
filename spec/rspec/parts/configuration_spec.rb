@@ -42,4 +42,18 @@ describe Rspec::Parts::Configuration do
       expect(Rspec::Parts.config.rspec_opts).to eq('--profile --tag ~nginx --format progress')
     end
   end
+
+  describe '#default_number_of_parts' do
+    it 'defaults to four' do
+      expect(Rspec::Parts.config.default_number_of_parts).to eq(4)
+    end
+
+    it 'is configurable' do
+      Rspec::Parts.configure do |config|
+        config.default_number_of_parts = 2
+      end
+
+      expect(Rspec::Parts.config.default_number_of_parts).to eq(2)
+    end
+  end
 end

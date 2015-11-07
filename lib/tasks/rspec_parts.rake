@@ -5,7 +5,7 @@ if defined?(RSpec)
     desc 'Run part M of N specs'
     RSpec::Core::RakeTask.new(:part, :part, :groups) do |task, task_args|
       config = Rspec::Parts.config
-      groups = task_args[:groups].to_i == 0 ? 4 : task_args[:groups].to_i
+      groups = task_args[:groups].to_i == 0 ? config.default_number_of_parts : task_args[:groups].to_i
       part = (task_args[:part].to_i == 0 ? 1 : task_args[:part].to_i) - 1
 
       file_list = Rspec::Parts::FileList.from(glob: config.spec_directory_glob, groups: groups, part: part)
