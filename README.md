@@ -33,6 +33,22 @@ rake spec:part[1,4]
 
 This will divide your specs into four equal parts, then run the first part of the four. `rake spec:part[2,4]` will run the second part, and so on.
 
+## Configuration
+
+The following are available for configuration:
+
+      Rspec::Parts.configure do |config|
+        config.file_list_exclusions = ['spec_helper.rb', 'spec/controllers/jasmine_fixture_generation/*.rb']
+        config.spec_directory_glob = 'test/*'
+        config.rspec_opts = '--profile --tag ~nginx --format progress'
+      end
+
+* `file_list_exclusions` will exclude the following files or directories from running.
+* `spec_directory_glob` allows you to choose which directories to include
+* `rspec_opts` allows you to tack on rspec options to the `rspec` command.
+
+See the `rspec_parts.rake` file for the usage of configuration variables.
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
