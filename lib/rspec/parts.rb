@@ -1,5 +1,6 @@
 require "rspec/parts/version"
 require "rspec/parts/configuration"
+require "rspec/parts/file_list"
 
 module Rspec
   module Parts
