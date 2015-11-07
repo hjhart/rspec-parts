@@ -37,6 +37,8 @@ This will divide your specs into four equal parts, then run the first part of th
 
 ## Configuration
 
+In order to properly configure rspec-parts, you must create the file `spec/support/rspec-parts.rb`, and configure as below:
+
 The following are available for configuration:
 
       Rspec::Parts.configure do |config|
