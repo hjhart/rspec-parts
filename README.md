@@ -37,13 +37,11 @@ This will divide your specs into four equal parts, then run the first part of th
 
 ## Configuration
 
-In order to properly configure rspec-parts, you must create the file `spec/support/rspec-parts.rb`, and configure as below:
-
-The following are available for configuration:
+This gem should work pretty well with rspec. If you need to configure something, however, you **must** create the file `spec/support/rspec-parts.rb`, and configure as below:
 
       Rspec::Parts.configure do |config|
-        config.file_list_exclusions = ['spec_helper.rb', 'spec/controllers/jasmine_fixture_generation/*.rb']
-        config.spec_directory_glob = 'test/*'
+        config.file_list_exclusions = ['spec/controllers/jasmine_fixture_generation/*.rb']
+        config.spec_directory_glob = 'spec/*'
         config.rspec_opts = '--profile --tag ~nginx --format progress'
         config.default_number_of_parts = 2
       end
