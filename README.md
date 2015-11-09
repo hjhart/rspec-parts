@@ -9,6 +9,8 @@ This allows you to split your spec suite into multiple, but equal **parts**. We 
 
 This sped up our Travis Pro builds from running one travis process in **70 minutes** to running four processes in **15 minutes** each.
 
+See the [blog post][blog-post] about how we went about configuring this gem for Travis.
+
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -61,7 +63,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/hjhart/rspec-parts. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at [https://github.com/hjhart/rspec-parts][rspec-parts]. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](contributor-covenant.org) code of conduct.
 
 ## License
 
@@ -70,3 +72,5 @@ The gem is available as open source under the terms of the [MIT License][mit-lic
 [mit-license]: http://opensource.org/licenses/MIT
 [jasmine]: https://github.com/jasmine/jasmine-gem
 [rspec]: https://github.com/rspec/rspec
+[rspec-parts]: https://github.com/hjhart/rspec-parts
+[blog-post]: http://building.wanelo.com/2015/11/09/2015-11-9-fully-utilize-your-travis-pro-resources.html
