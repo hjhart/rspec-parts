@@ -2,3 +2,8 @@ language: ruby
 rvm:
   - 2.1.4
 before_install: gem install bundler -v 1.10.6
+env:
+  - RSPEC_PART=1 RSPEC_GROUPS=3
+  - RSPEC_PART=2 RSPEC_GROUPS=3
+  - RSPEC_PART=3 RSPEC_GROUPS=3
+script: "script/ci-travis
