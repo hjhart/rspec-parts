@@ -39,7 +39,7 @@ This will divide your specs into four equal parts, then run the first part of th
 
 ## Travis CI set up
 
-See the file [.travis.example.yml](https://github.com/hjhart/rspec-parts/blob/master/.travis.yml) for an example on how to configure travis to run these builds.
+See the file [.travis.example.yml](https://github.com/hjhart/rspec-parts/blob/master/.travis.example.yml) for an example on how to configure travis to run these builds.
 
 ## Configuration
 
