@@ -37,6 +37,10 @@ rake spec:part[1,4]
 
 This will divide your specs into four equal parts, then run the first part of the four. `rake spec:part[2,4]` will run the second part, and so on.
 
+## Travis CI set up
+
+See the file [.travis.example.yml](https://github.com/hjhart/rspec-parts/blob/master/.travis.yml) for an example on how to configure travis to run these builds.
+
 ## Configuration
 
 This gem should work pretty well with rspec. If you need to configure something, however, you **must** create the file `spec/support/rspec-parts.rb`, and configure as below:
