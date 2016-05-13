@@ -77,4 +77,4 @@ The gem is available as open source under the terms of the [MIT License][mit-lic
 [jasmine]: https://github.com/jasmine/jasmine-gem
 [rspec]: https://github.com/rspec/rspec
 [rspec-parts]: https://github.com/hjhart/rspec-parts
-[blog-post]: http://building.wanelo.com/2015/11/09/2015-11-9-fully-utilize-your-travis-pro-resources.html
+[blog-post]: http://building.wanelo.com/2015/11/09/fully-utilize-your-travis-pro-resources.html
