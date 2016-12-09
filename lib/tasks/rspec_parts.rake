@@ -1,3 +1,4 @@
+require 'rspec/core/rake_task'
 require 'rspec/parts'
 
 if defined?(RSpec)
