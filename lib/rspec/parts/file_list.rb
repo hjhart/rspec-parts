@@ -33,13 +33,13 @@ end
 module Rspec
   module Parts
     class FileList
-      def self.from(glob: glob, groups: groups, part: part)
+      def self.from(dir_glob: glob, num_of_groups: groups, which_part: part)
         total_file_list = Rake::FileList.new
 
-        Dir.glob(glob).each do |spec_directory|
+        Dir.glob(dir_glob).each do |spec_directory|
           directory_file_list = Rake::FileList.new
           directory_file_list.add("#{spec_directory}/**/*_spec.rb")
-          subset_of_directory_file_list = directory_file_list.to_a.in_groups(groups, false).at(part)
+          subset_of_directory_file_list = directory_file_list.to_a.in_groups(num_of_groups, false).at(which_part)
           total_file_list.add(subset_of_directory_file_list)
         end
 

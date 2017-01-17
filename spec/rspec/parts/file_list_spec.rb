@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe Rspec::Parts::FileList do
   describe '.from' do
-    let(:subject) { described_class.from(glob: directory_glob, groups: 2, part: part) }
+    let(:subject) { described_class.from(dir_glob: directory_glob, num_of_groups: 2, which_part: part) }
 
     context 'given a directory with two files in two directories' do
       let(:directory_glob) { 'spec/*' }
