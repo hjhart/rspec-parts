@@ -13,7 +13,7 @@ if defined?(RSpec)
 
       puts "Running part #{part} of #{groups} groups"
 
-      file_list = Rspec::Parts::FileList.from(glob: config.spec_directory_glob, groups: groups, part: part_index)
+      file_list = Rspec::Parts::FileList.from(dir_glob: config.spec_directory_glob, num_of_groups: groups, which_part: part_index)
       config.file_list_exclusions.each do |exclusion|
         file_list.exclude(exclusion)
       end
